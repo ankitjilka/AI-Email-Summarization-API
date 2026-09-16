@@ -330,7 +330,7 @@ Swagger provides:
 
 ```bash
 git clone <repository-url>
-cd email-ai
+cd AI-Email-Summarization-API
 ```
 
 ## 2. Create virtual environment
@@ -457,6 +457,7 @@ export AI_API_KEY="YOUR_REAL_API_KEY"
 
 Then:
 ```bash
+source .venv/bin/activate
 python tests/run_evaluation.py
 ```
 
