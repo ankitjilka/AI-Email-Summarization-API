@@ -1,0 +1,33 @@
+{
+  "thread_id": "negotiation-001",
+  "emails": [
+    {
+      "sender": "buyer@example.com",
+      "recipients": ["sales@company.com"],
+      "date": "2026-09-16T09:00:00",
+      "subject": "Pricing discussion",
+      "body": "We would like a 10% discount on this order."
+    },
+    {
+      "sender": "sales@company.com",
+      "recipients": ["buyer@example.com"],
+      "date": "2026-09-16T09:30:00",
+      "subject": "Re: Pricing discussion",
+      "body": "We can offer a 5% discount."
+    },
+    {
+      "sender": "buyer@example.com",
+      "recipients": ["sales@company.com"],
+      "date": "2026-09-16T10:00:00",
+      "subject": "Re: Pricing discussion",
+      "body": "Could you please consider 7%?"
+    },
+    {
+      "sender": "sales@company.com",
+      "recipients": ["buyer@example.com"],
+      "date": "2026-09-16T10:15:00",
+      "subject": "Re: Pricing discussion",
+      "body": "I will check internally and get back to you."
+    }
+  ]
+}

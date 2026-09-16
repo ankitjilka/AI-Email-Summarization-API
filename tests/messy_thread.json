@@ -1,0 +1,19 @@
+{
+  "thread_id": "messy-001",
+  "emails": [
+    {
+      "sender": "raj@customer.com",
+      "recipients": ["amit@supplier.com"],
+      "date": "2026-09-15T09:30:00",
+      "subject": "Invoice issue",
+      "body": "<div>Hello Amit,</div><div>We received invoice INV-1234 but Product A quantity is incorrect. We ordered <b>100 units</b>, but the invoice shows <b>120 units</b>.</div><p>Please check.</p><p>Thanks,<br>Raj</p><br><div>On Sep 14, 2026, Amit wrote:</div><blockquote>Hi Raj, please check the order.</blockquote><div>Sent from my iPhone</div>"
+    },
+    {
+      "sender": "amit@supplier.com",
+      "recipients": ["raj@customer.com"],
+      "date": "2026-09-15T10:00:00",
+      "subject": "Re: Invoice issue",
+      "body": "<p>Hi Raj,</p><p>You are correct. The warehouse shipped 100 units, but the invoice was generated with 120 units.</p><p>I have asked our accounts team to correct the invoice.</p><p>Regards,<br>Amit</p>"
+    }
+  ]
+}

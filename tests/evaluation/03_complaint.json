@@ -1,0 +1,33 @@
+{
+  "thread_id": "complaint-001",
+  "emails": [
+    {
+      "sender": "customer@example.com",
+      "recipients": ["support@company.com"],
+      "date": "2026-09-16T10:00:00",
+      "subject": "Damaged product",
+      "body": "The package arrived today, but two products are damaged. Please help us with a replacement."
+    },
+    {
+      "sender": "support@company.com",
+      "recipients": ["customer@example.com"],
+      "date": "2026-09-16T10:20:00",
+      "subject": "Re: Damaged product",
+      "body": "Sorry about the issue. Please send us photographs of the damaged products and the package."
+    },
+    {
+      "sender": "customer@example.com",
+      "recipients": ["support@company.com"],
+      "date": "2026-09-16T11:00:00",
+      "subject": "Re: Damaged product",
+      "body": "I have attached the requested photographs."
+    },
+    {
+      "sender": "support@company.com",
+      "recipients": ["customer@example.com"],
+      "date": "2026-09-16T11:30:00",
+      "subject": "Re: Damaged product",
+      "body": "We have reviewed the photographs and will arrange a replacement."
+    }
+  ]
+}

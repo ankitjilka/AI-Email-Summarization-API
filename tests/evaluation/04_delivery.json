@@ -1,0 +1,26 @@
+{
+  "thread_id": "delivery-001",
+  "emails": [
+    {
+      "sender": "customer@example.com",
+      "recipients": ["supplier@example.com"],
+      "date": "2026-09-16T09:00:00",
+      "subject": "Order 456 delivery",
+      "body": "Could you please confirm the status of order 456? We have not received it yet."
+    },
+    {
+      "sender": "supplier@example.com",
+      "recipients": ["customer@example.com"],
+      "date": "2026-09-16T09:30:00",
+      "subject": "Re: Order 456 delivery",
+      "body": "The shipment was delayed because of a transport issue. The revised expected delivery date is September 20, 2026."
+    },
+    {
+      "sender": "customer@example.com",
+      "recipients": ["supplier@example.com"],
+      "date": "2026-09-16T10:00:00",
+      "subject": "Re: Order 456 delivery",
+      "body": "Thanks for the update. We will plan accordingly."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "thread_id": "meeting-001",
+  "emails": [
+    {
+      "sender": "sales@company.com",
+      "recipients": ["client@example.com"],
+      "date": "2026-09-16T09:00:00",
+      "subject": "Meeting",
+      "body": "Hi, can we meet Thursday at 3 PM to discuss the new order?"
+    },
+    {
+      "sender": "client@example.com",
+      "recipients": ["sales@company.com"],
+      "date": "2026-09-16T09:15:00",
+      "subject": "Re: Meeting",
+      "body": "Thursday at 3 PM does not work for me. Friday at 11 AM would work."
+    },
+    {
+      "sender": "sales@company.com",
+      "recipients": ["client@example.com"],
+      "date": "2026-09-16T09:30:00",
+      "subject": "Re: Meeting",
+      "body": "Friday at 11 AM is confirmed. I will send the meeting link shortly."
+    }
+  ]
+}
