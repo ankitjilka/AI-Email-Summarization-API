@@ -468,7 +468,7 @@ The repository includes 11 representative email-thread test scenarios:
 - Multiple explicit dates
 - Long multi-email conversations
 
-For run above scnario first Make sure the API is running:
+For run above test scenarios first Make sure the API is running:
 
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000
