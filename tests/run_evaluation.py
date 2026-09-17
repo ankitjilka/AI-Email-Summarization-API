@@ -15,6 +15,12 @@ SCENARIOS = [
     "03_complaint.json",
     "04_delivery.json",
     "05_negotiation.json",
+    "06_informational.json",
+    "07_multiple_actions.json",
+    "08_state_change.json",
+    "09_relative_dates.json",
+    "10_multiple_dates.json",
+    "11_long_thread.json",
 ]
 
 

@@ -1,0 +1,68 @@
+{
+  "thread_id": "long-thread-001",
+  "emails": [
+    {
+      "sender": "buyer@example.com",
+      "recipients": ["sales@example.com"],
+      "date": "2026-09-17T09:00:00",
+      "subject": "Order 789 - quotation and delivery",
+      "body": "We would like to place an order for 500 units of Product A. Please send us your revised quotation."
+    },
+    {
+      "sender": "sales@example.com",
+      "recipients": ["buyer@example.com"],
+      "date": "2026-09-17T09:30:00",
+      "subject": "Re: Order 789 - quotation and delivery",
+      "body": "We can supply Product A at 1000 per unit. We will send the formal quotation shortly."
+    },
+    {
+      "sender": "buyer@example.com",
+      "recipients": ["sales@example.com"],
+      "date": "2026-09-17T10:00:00",
+      "subject": "Re: Order 789 - quotation and delivery",
+      "body": "Please revise the quantity to 600 units. We would also like to discuss a discount for the larger order."
+    },
+    {
+      "sender": "sales@example.com",
+      "recipients": ["buyer@example.com"],
+      "date": "2026-09-17T10:30:00",
+      "subject": "Re: Order 789 - quotation and delivery",
+      "body": "We can offer a 3% discount for 600 units. Please confirm whether you would like us to proceed with the revised quantity."
+    },
+    {
+      "sender": "buyer@example.com",
+      "recipients": ["sales@example.com"],
+      "date": "2026-09-17T11:00:00",
+      "subject": "Re: Order 789 - quotation and delivery",
+      "body": "Yes, please proceed with 600 units and the 3% discount."
+    },
+    {
+      "sender": "sales@example.com",
+      "recipients": ["buyer@example.com"],
+      "date": "2026-09-17T11:30:00",
+      "subject": "Re: Order 789 - quotation and delivery",
+      "body": "Confirmed. The revised order is 600 units with a 3% discount. Our warehouse expects to dispatch the order on September 22, 2026."
+    },
+    {
+      "sender": "buyer@example.com",
+      "recipients": ["sales@example.com"],
+      "date": "2026-09-17T12:00:00",
+      "subject": "Re: Order 789 - quotation and delivery",
+      "body": "Please make sure the goods are dispatched by September 22 because we need them urgently."
+    },
+    {
+      "sender": "sales@example.com",
+      "recipients": ["buyer@example.com"],
+      "date": "2026-09-17T13:00:00",
+      "subject": "Re: Order 789 - quotation and delivery",
+      "body": "There has been a delay at the warehouse. The revised expected dispatch date is September 24, 2026."
+    },
+    {
+      "sender": "buyer@example.com",
+      "recipients": ["sales@example.com"],
+      "date": "2026-09-17T13:30:00",
+      "subject": "Re: Order 789 - quotation and delivery",
+      "body": "Understood. Please send the tracking number once the order is dispatched."
+    }
+  ]
+}

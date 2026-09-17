@@ -1,0 +1,365 @@
+$ python tests/run_evaluation.py                                                                                                                                                                                                   [12:53:58]
+
+======================================================================
+Running: 01_invoice.json
+======================================================================
+{
+  "thread_id": "messy-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 24103.84,
+  "model_latency_ms": 24103.27,
+  "summary": {
+    "overview": "The customer reported an incorrect quantity on the invoice (100 units ordered vs 120 units on invoice). The supplier confirmed the error and stated they have asked their accounts team to correct the invoice.",
+    "key_points": [
+      "Customer ordered 100 units of Product A",
+      "Invoice INV-1234 shows 120 units of Product A",
+      "Supplier confirmed warehouse shipped 100 units",
+      "Supplier has asked accounts team to correct the invoice"
+    ],
+    "decisions": [],
+    "action_items": [
+      {
+        "owner": "accounts team",
+        "action": "correct the invoice",
+        "status": "pending",
+        "deadline": null
+      }
+    ],
+    "pending_questions": []
+  }
+}
+
+API latency: 24103.84 ms
+Model latency: 24103.27 ms
+
+======================================================================
+Running: 02_meeting.json
+======================================================================
+{
+  "thread_id": "meeting-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 34369.49,
+  "model_latency_ms": 34368.17,
+  "summary": {
+    "overview": "The email thread discusses scheduling a meeting for a new order. The initial request was for a meeting on Thursday at 3 PM, but the client proposed Friday at 11 AM instead. The sales team confirmed Friday at 11 AM and stated they will send the meeting link shortly.",
+    "key_points": [
+      "Initial meeting request for Thursday at 3 PM",
+      "Client proposed Friday at 11 AM as alternative",
+      "Sales confirmed Friday at 11 AM as meeting time",
+      "Sales will send meeting link shortly"
+    ],
+    "decisions": [
+      "Meeting time confirmed as Friday at 11 AM"
+    ],
+    "action_items": [
+      {
+        "owner": "sales@company.com",
+        "action": "send meeting link",
+        "status": "pending",
+        "deadline": null
+      }
+    ],
+    "pending_questions": []
+  }
+}
+
+API latency: 34369.49 ms
+Model latency: 34368.17 ms
+
+======================================================================
+Running: 03_complaint.json
+======================================================================
+{
+  "thread_id": "complaint-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 27912.44,
+  "model_latency_ms": 27911.67,
+  "summary": {
+    "overview": "Customer reported damaged products; support requested photos; customer sent photos; support confirmed they will arrange a replacement.",
+    "key_points": [
+      "Customer reported damaged products",
+      "Support requested photographs of damaged products",
+      "Customer sent photographs",
+      "Support confirmed they will arrange a replacement"
+    ],
+    "decisions": [],
+    "action_items": [
+      {
+        "owner": "support@company.com",
+        "action": "arrange replacement",
+        "status": "pending",
+        "deadline": null
+      }
+    ],
+    "pending_questions": []
+  }
+}
+
+API latency: 27912.44 ms
+Model latency: 27911.67 ms
+
+======================================================================
+Running: 04_delivery.json
+======================================================================
+{
+  "thread_id": "delivery-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 37957.71,
+  "model_latency_ms": 37956.08,
+  "summary": {
+    "overview": "The customer requested confirmation of order 456 status. The supplier confirmed a delayed shipment with a revised expected delivery date of September 20, 2026. The customer acknowledged the update and stated they will plan accordingly.",
+    "key_points": [
+      "Order 456 status requested by customer",
+      "Supplier confirmed shipment delay due to transport issue",
+      "Revised expected delivery date: September 20, 2026",
+      "Customer acknowledged update and will plan accordingly"
+    ],
+    "decisions": [],
+    "action_items": [
+      {
+        "owner": "supplier",
+        "action": "dispatch the order",
+        "status": "pending",
+        "deadline": "2026-09-20"
+      }
+    ],
+    "pending_questions": []
+  }
+}
+
+API latency: 37957.71 ms
+Model latency: 37956.08 ms
+
+======================================================================
+Running: 05_negotiation.json
+======================================================================
+{
+  "thread_id": "negotiation-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 22758.07,
+  "model_latency_ms": 22757.66,
+  "summary": {
+    "overview": "Pricing discussion between buyer and sales team",
+    "key_points": [
+      "Buyer requested 10% discount",
+      "Sales offered 5% discount",
+      "Buyer requested 7% discount",
+      "Sales will check internally and get back to buyer"
+    ],
+    "decisions": [],
+    "action_items": [
+      {
+        "owner": "sales@company.com",
+        "action": "check internally",
+        "status": "pending",
+        "deadline": null
+      }
+    ],
+    "pending_questions": []
+  }
+}
+
+API latency: 22758.07 ms
+Model latency: 22757.66 ms
+
+======================================================================
+Running: 06_informational.json
+======================================================================
+{
+  "thread_id": "informational-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 15971.21,
+  "model_latency_ms": 15970.49,
+  "summary": {
+    "overview": "Office holiday notice",
+    "key_points": [
+      "The office will remain closed on September 25, 2026 due to the annual company holiday."
+    ],
+    "decisions": [],
+    "action_items": [],
+    "pending_questions": []
+  }
+}
+
+API latency: 15971.21 ms
+Model latency: 15970.49 ms
+
+======================================================================
+Running: 07_multiple_actions.json
+======================================================================
+{
+  "thread_id": "multiple-actions-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 23910.91,
+  "model_latency_ms": 23910.5,
+  "summary": {
+    "overview": "Customer order follow-up for customer ABC. Sales confirmed final quantity (500 units). Accounts and Warehouse have pending actions.",
+    "key_points": [
+      "Sales confirmed final quantity as 500 units",
+      "Accounts should prepare revised invoice",
+      "Warehouse should confirm expected dispatch date"
+    ],
+    "decisions": [],
+    "action_items": [
+      {
+        "owner": "accounts@example.com",
+        "action": "prepare revised invoice",
+        "status": "pending",
+        "deadline": null
+      },
+      {
+        "owner": "warehouse@example.com",
+        "action": "confirm expected dispatch date",
+        "status": "pending",
+        "deadline": null
+      }
+    ],
+    "pending_questions": []
+  }
+}
+
+API latency: 23910.91 ms
+Model latency: 23910.50 ms
+
+======================================================================
+Running: 08_state_change.json
+======================================================================
+{
+  "thread_id": "state-change-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 21489.29,
+  "model_latency_ms": 21488.94,
+  "summary": {
+    "overview": "The customer requested a replacement for a damaged product. Support confirmed they arranged the replacement shipment. The customer now requests the tracking number once it's available.",
+    "key_points": [
+      "Product damaged, replacement requested",
+      "Support arranged replacement shipment",
+      "Customer requests tracking number once available"
+    ],
+    "decisions": [],
+    "action_items": [
+      {
+        "owner": "support@company.com",
+        "action": "send tracking number",
+        "status": "pending",
+        "deadline": null
+      }
+    ],
+    "pending_questions": []
+  }
+}
+
+API latency: 21489.29 ms
+Model latency: 21488.94 ms
+
+======================================================================
+Running: 09_relative_dates.json
+======================================================================
+{
+  "thread_id": "relative-date-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 17953.23,
+  "model_latency_ms": 17952.94,
+  "summary": {
+    "overview": "The customer requested a revised invoice to be sent today for payment processing tomorrow. The supplier responded that they will send the revised invoice shortly.",
+    "key_points": [
+      "Customer requested revised invoice today for payment processing tomorrow",
+      "Supplier committed to sending revised invoice shortly"
+    ],
+    "decisions": [],
+    "action_items": [
+      {
+        "owner": "supplier@example.com",
+        "action": "send revised invoice",
+        "status": "pending",
+        "deadline": null
+      }
+    ],
+    "pending_questions": []
+  }
+}
+
+API latency: 17953.23 ms
+Model latency: 17952.94 ms
+
+======================================================================
+Running: 10_multiple_dates.json
+======================================================================
+{
+  "thread_id": "multiple-dates-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 37799.52,
+  "model_latency_ms": 37798.18,
+  "summary": {
+    "overview": "The buyer requested a revised quotation by September 20, 2026, with a conditional delivery by September 25, 2026 if approved. The sales team confirmed they will send the revised quotation by September 20, 2026 and will check delivery feasibility for September 25, 2026.",
+    "key_points": [
+      "Revised quotation due by September 20, 2026",
+      "Delivery by September 25, 2026 conditional on approval",
+      "Sales will send revised quotation by September 20, 2026",
+      "Sales will check delivery feasibility for September 25, 2026"
+    ],
+    "decisions": [],
+    "action_items": [
+      {
+        "owner": "sales@example.com",
+        "action": "send revised quotation",
+        "status": "pending",
+        "deadline": "2026-09-20"
+      },
+      {
+        "owner": "sales@example.com",
+        "action": "check delivery feasibility",
+        "status": "pending",
+        "deadline": null
+      }
+    ],
+    "pending_questions": []
+  }
+}
+
+API latency: 37799.52 ms
+Model latency: 37798.18 ms
+
+======================================================================
+Running: 11_long_thread.json
+======================================================================
+{
+  "thread_id": "long-thread-001",
+  "model": "client-email-ai-v1",
+  "latency_ms": 78752.92,
+  "model_latency_ms": 78751.08,
+  "summary": {
+    "overview": "The email thread discusses the revision of an order for Product A from 500 to 600 units with a 3% discount. The warehouse initially expected to dispatch the order on September 22, 2026, but due to a delay, the revised dispatch date is September 24, 2026. The buyer requests the order to be dispatched by September 22, 2026, but the sales team confirms the new dispatch date. The buyer also asks for a tracking number once the order is dispatched.",
+    "key_points": [
+      "Order quantity revised from 500 to 600 units",
+      "3% discount applied for the larger order",
+      "Initial dispatch expected September 22, 2026",
+      "Revised dispatch date due to warehouse delay: September 24, 2026",
+      "Buyer requests dispatch by September 22, 2026",
+      "Buyer asks for tracking number upon dispatch"
+    ],
+    "decisions": [
+      "Order quantity confirmed at 600 units",
+      "3% discount confirmed for 600 units",
+      "Revised dispatch date set to September 24, 2026"
+    ],
+    "action_items": [
+      {
+        "owner": "sales@example.com",
+        "action": "send tracking number",
+        "status": "pending",
+        "deadline": null
+      },
+      {
+        "owner": "Unspecified",
+        "action": "Dispatch or deliver the order",
+        "status": "pending",
+        "deadline": "2026-09-24"
+      }
+    ],
+    "pending_questions": []
+  }
+}
+
+API latency: 78752.92 ms
+Model latency: 78751.08 ms

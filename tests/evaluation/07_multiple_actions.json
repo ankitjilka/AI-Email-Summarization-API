@@ -1,0 +1,24 @@
+{
+  "thread_id": "multiple-actions-001",
+  "emails": [
+    {
+      "sender": "manager@company.com",
+      "recipients": [
+        "sales@example.com",
+        "accounts@example.com"
+      ],
+      "date": "2026-09-17T09:00:00",
+      "subject": "Customer order follow-up",
+      "body": "Please complete the following for customer ABC. Sales should confirm the final quantity. Accounts should prepare the revised invoice. Warehouse should confirm the expected dispatch date."
+    },
+    {
+      "sender": "sales@example.com",
+      "recipients": [
+        "manager@company.com"
+      ],
+      "date": "2026-09-17T10:00:00",
+      "subject": "Re: Customer order follow-up",
+      "body": "Sales has confirmed the final quantity as 500 units."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "thread_id": "relative-date-001",
+  "emails": [
+    {
+      "sender": "customer@example.com",
+      "recipients": ["supplier@example.com"],
+      "date": "2026-09-17T09:00:00",
+      "subject": "Urgent order",
+      "body": "Please send the revised invoice today. We need to process the payment tomorrow."
+    },
+    {
+      "sender": "supplier@example.com",
+      "recipients": ["customer@example.com"],
+      "date": "2026-09-17T10:00:00",
+      "subject": "Re: Urgent order",
+      "body": "We will send the revised invoice shortly."
+    }
+  ]
+}

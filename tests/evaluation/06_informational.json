@@ -1,0 +1,23 @@
+{
+  "thread_id": "informational-001",
+  "emails": [
+    {
+      "sender": "hr@company.com",
+      "recipients": [
+        "employee@example.com"
+      ],
+      "date": "2026-09-17T09:00:00",
+      "subject": "Office holiday notice",
+      "body": "This is a reminder that the office will remain closed on September 25, 2026 due to the annual company holiday."
+    },
+    {
+      "sender": "employee@example.com",
+      "recipients": [
+        "hr@company.com"
+      ],
+      "date": "2026-09-17T09:15:00",
+      "subject": "Re: Office holiday notice",
+      "body": "Thanks for the information."
+    }
+  ]
+}

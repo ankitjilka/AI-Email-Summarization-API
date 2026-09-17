@@ -58,6 +58,7 @@ Client Gmail-like Application
 
 > **vLLM is not used in the current POC.** It can be considered later for GPU-based production inference.
 
+
 ---
 
 ## Why Qwen3-4B?
@@ -402,10 +403,21 @@ email-ai/
 │   │   ├── 02_meeting.json
 │   │   ├── 03_complaint.json
 │   │   ├── 04_delivery.json
-│   │   └── 05_negotiation.json
-    ├── run_evaluation.py
+│   │   ├── 05_negotiation.json
+|   |   ├── 06_informational.json
+|   |   ├── 07_multiple_actions.json
+|   |   ├── 08_state_change.json
+|   |   ├── 09_relative_dates.json
+|   |   ├── 10_multiple_dates.json
+|   |   └── 11_long_thread.json
+|   |
+|   ├── results/
+|   |   └── evaluation_results.txt
+|   |
+|   ├── run_evaluation.py
 │   └── test_email_processor.py
-│
+|    
+│   
 ├── .env.example
 ├── .gitignore
 ├── requirements.txt
@@ -418,13 +430,21 @@ email-ai/
 
 The current POC was tested using multiple email scenarios:
 
-| Scenario | Purpose |
-|---|---|
-| Invoice | Quantity mismatch and task state |
-| Meeting | Schedule changes and confirmation |
-| Complaint | Completed vs pending actions |
-| Delivery | Future commitment and explicit deadline |
-| Negotiation | Request vs offer vs approval |
+| Scenario | Purpose | Description |
+|---|---|---|
+| Invoice | Quantity mismatch and task state | Tests whether the AI can identify an invoice quantity discrepancy and determine whether the correction is still pending or already completed. |
+| Meeting | Schedule changes and confirmation | Tests whether the AI can follow changes in meeting time and identify the final confirmed schedule and remaining actions. |
+| Complaint | Completed vs pending actions | Tests whether the AI can distinguish actions that have already been completed from actions that are still pending. |
+| Delivery | Future commitment and explicit deadline | Tests whether the AI can identify a future delivery/dispatch action and correctly normalize an explicitly stated date. |
+| Negotiation | Request vs offer vs approval | Tests whether the AI can distinguish between a requested discount, an offered discount, and an actually approved discount. |
+| Informational | Avoiding invented actions | Tests whether the AI can recognize an informational email thread and avoid creating action items that were never requested or committed. |
+| Multiple Actions | Multiple owners and pending tasks | Tests whether the AI can identify several actions assigned to different people/teams and determine which ones are still pending. |
+| State Change | Thread state progression | Tests whether the AI can recognize when an earlier action is completed and a new action becomes the current pending task. |
+| Relative Dates | Date interpretation | Tests whether terms such as "today", "tomorrow", and "shortly" are preserved without being incorrectly converted into absolute calendar dates. |
+| Multiple Dates | Correct action/date association | Tests whether the AI can associate different dates with the correct actions without confusing proposed dates with confirmed deadlines. |
+| Long Thread | Multi-email context understanding | Tests the AI on a longer conversation with multiple changes to quantity, discount, dispatch date, and follow-up actions. |
+
+
 
 The current local CPU-only setup generally produces summaries in the tens-of-seconds range for small threads.
 
@@ -441,6 +461,12 @@ The repository includes 5 representative email-thread test scenarios:
 - Customer Complaint
 - Delivery
 - Pricing Negotiation
+- Informational emails
+- Multiple pending actions
+- Thread state changes
+- Relative dates
+- Multiple explicit dates
+- Long multi-email conversations
 
 Make sure the API is running first:
 
@@ -468,8 +494,41 @@ It will automatically run:
 03_complaint.json
 04_delivery.json
 05_negotiation.json
+06_informational.json
+07_multiple_actions.json
+08_state_change.json
+09_relative_dates.json
+10_multiple_dates.json
+11_long_thread.json
 ```
 and print the response for each.
+
+The complete evaluation output is available here:
+**tests/results/evaluation_results.txt**
+
+
+
+### Evaluation Summary
+
+```markdown
+| Scenario | Result |
+|---|---|
+| Invoice | ✅ Passed |
+| Meeting | ✅ Passed |
+| Complaint | ✅ Passed |
+| Delivery | ✅ Passed |
+| Negotiation | ✅ Passed |
+| Informational | ✅ Passed |
+| Multiple Actions | ✅ Passed |
+| State Change | ✅ Passed |
+| Relative Dates | ✅ Passed |
+| Multiple Dates | ✅ Passed |
+| Long Thread | ✅ Passed |
+
+```
+**Average latency:** ~31 seconds on the current CPU-only development machine.
+
+**Note:** The long-thread scenario (~9 emails) took ~79 seconds. Production performance should be benchmarked on the target hardware and workload.
 
 
 ---
