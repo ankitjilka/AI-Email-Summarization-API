@@ -454,7 +454,7 @@ The current local CPU-only setup generally produces summaries in the tens-of-sec
 
 ## Run Evaluation Scenarios
 
-The repository includes 5 representative email-thread test scenarios:
+The repository includes 11 representative email-thread test scenarios:
 
 - Invoice
 - Meeting
@@ -468,7 +468,7 @@ The repository includes 5 representative email-thread test scenarios:
 - Multiple explicit dates
 - Long multi-email conversations
 
-Make sure the API is running first:
+For run above scnario first Make sure the API is running:
 
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000
