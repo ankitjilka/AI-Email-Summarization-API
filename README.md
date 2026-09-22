@@ -354,6 +354,8 @@ Make sure Ollama is installed and running.
 Pull the model:
 
 ```bash
+curl -fsSL https://ollama.com/install.sh | sh
+ollama --version
 ollama pull qwen3:4b
 ```
 
